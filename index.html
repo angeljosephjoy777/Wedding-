@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Invitation | Arjun & Ananya</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf2;
+    color: #4a3425;
+    overflow-x: hidden;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(70, 35, 20, 0.45), rgba(70, 35, 20, 0.45)),
+        radial-gradient(circle at top, #f5d59b, #8b552f 70%, #4b2d20);
+}
+
+.hero::before,
+.hero::after {
+    content: "✦";
+    position: absolute;
+    color: rgba(255, 221, 148, 0.6);
+    font-size: 35px;
+    animation: float 5s infinite ease-in-out;
+}
+
+.hero::before {
+    top: 15%;
+    left: 12%;
+}
+
+.hero::after {
+    bottom: 18%;
+    right: 12%;
+    animation-delay: 2s;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    color: white;
+}
+
+.small-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.names {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 13vw, 120px);
+    font-weight: 400;
+    color: #ffe5a8;
+    line-height: 1.1;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.and {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: white;
+    margin: 5px 0;
+}
+
+.hero-date {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+.scroll {
+    margin-top: 45px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    animation: bounce 2s infinite;
+}
+
+/* ---------- SECTIONS ---------- */
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    color: #9a612f;
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #80634d;
+    margin-bottom: 35px;
+}
+
+/* ---------- INVITATION ---------- */
+
+.invitation {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(207,153,72,.12), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(207,153,72,.12), transparent 25%),
+        #fffaf2;
+}
+
+.invitation-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 45px 30px;
+    border: 1px solid #d9b879;
+    position: relative;
+    background: rgba(255,255,255,.65);
+    box-shadow: 0 15px 40px rgba(91,55,24,.08);
+}
+
+.invitation-card::before,
+.invitation-card::after {
+    content: "❦";
+    position: absolute;
+    font-size: 35px;
+    color: #b27b35;
+}
+
+.invitation-card::before {
+    top: 15px;
+    left: 20px;
+}
+
+.invitation-card::after {
+    bottom: 15px;
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+.invitation-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    line-height: 1.5;
+    color: #68452c;
+}
+
+.invitation-card p:last-child {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ---------- DETAILS ---------- */
+
+.details {
+    background: #f7ead5;
+}
+
+.detail-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.detail-box {
+    background: rgba(255,255,255,.7);
+    padding: 35px 20px;
+    border: 1px solid #d9b879;
+    transition: transform .3s ease;
+}
+
+.detail-box:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.detail-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #704525;
+}
+
+.detail-box p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ---------- COUNTDOWN ---------- */
+
+.countdown-section {
+    background: #4d3022;
+    color: white;
+}
+
+.countdown-section .section-title {
+    color: #f1cb83;
+}
+
+.countdown-section .section-subtitle {
+    color: #e5d0b4;
+}
+
+.countdown {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.time-box {
+    padding: 25px 10px;
+    border: 1px solid rgba(255,220,155,.5);
+    background: rgba(255,255,255,.06);
+}
+
+.time-box span {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    color: #f3ce88;
+    font-weight: 600;
+}
+
+.time-box small {
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+/* ---------- COUPLE ---------- */
+
+.couple {
+    background: #fffaf2;
+}
+
+.couple-container {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.person {
+    flex: 1;
+}
+
+.person-circle {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    border: 4px solid #d3aa65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1ddbc;
+    font-size: 55px;
+}
+
+.person h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    color: #915b2f;
+    margin-top: 15px;
+}
+
+.heart {
+    font-size: 35px;
+    color: #a64747;
+}
+
+/* ---------- VENUE ---------- */
+
+.venue {
+    background: #f7ead5;
+}
+
+.venue-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 25px;
+    background: white;
+    border: 1px solid #d9b879;
+}
+
+.venue-name {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #704525;
+    margin-bottom: 15px;
+}
+
+.venue-address {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.map-button,
+.rsvp-button {
+    display: inline-block;
+    padding: 13px 28px;
+    text-decoration: none;
+    color: white;
+    background: #87542d;
+    border-radius: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.map-button:hover,
+.rsvp-button:hover {
+    background: #b17a38;
+    transform: translateY(-2px);
+}
+
+/* ---------- RSVP ---------- */
+
+.rsvp {
+    background:
+        linear-gradient(rgba(70, 40, 25, .85), rgba(70, 40, 25, .85)),
+        linear-gradient(135deg, #c69755, #5c3824);
+    color: white;
+}
+
+.rsvp .section-title {
+    color: #f4d18d;
+}
+
+.rsvp p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.rsvp-button {
+    background: #d4a75f;
+    color: #4c301e;
+    font-weight: 600;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #2e1c15;
+    color: #d8c1a5;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.footer-names {
+    font-family: 'Great Vibes', cursive;
+    color: #f1c978;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-25px) rotate(20deg);
+    }
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width: 700px) {
+
+    section {
+        padding: 65px 15px;
+    }
+
+    .names {
+        font-size: 70px;
+    }
+
+    .detail-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+    }
+
+    .time-box span {
+        font-size: 32px;
+    }
+
+    .couple-container {
+        gap: 10px;
+    }
+
+    .person-circle {
+        width: 110px;
+        height: 110px;
+        font-size: 40px;
+    }
+
+    .person h3 {
+        font-size: 32px;
+    }
+
+    .heart {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            TOGETHER WITH THEIR FAMILIES
+        </div>
+
+        <!-- CHANGE NAMES HERE -->
+        <div class="names">Arjun</div>
+
+        <div class="and">&</div>
+
+        <!-- CHANGE NAME HERE -->
+        <div class="names">Ananya</div>
+
+        <!-- CHANGE DATE HERE -->
+        <div class="hero-date">
+            15 • DECEMBER • 2026
+        </div>
+
+        <div class="scroll">
+            ✦ SCROLL TO EXPLORE ✦
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= INVITATION ================= -->
+
+<section class="invitation">
+
+    <h2 class="section-title">We Are Getting Married</h2>
+
+    <div class="section-subtitle">
+        A NEW CHAPTER BEGINS
+    </div>
+
+    <div class="invitation-card">
+
+        <p class="invitation-text">
+            Two hearts, two lives, one beautiful journey.
+        </p>
+
+        <p>
+            With immense joy and happiness, we invite you
+            to celebrate the beginning of our forever.
+            Your presence and blessings will make our special
+            day even more memorable.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COUPLE ================= -->
+
+<section class="couple">
+
+    <h2 class="section-title">The Happy Couple</h2>
+
+    <div class="section-subtitle">
+        TWO SOULS • ONE LOVE
+    </div>
+
+    <div class="couple-container">
+
+        <div class="person">
+
+            <div class="person-circle">
+                👰
+            </div>
+
+            <!-- CHANGE NAME -->
+            <h3>Ananya</h3>
+
+        </div>
+
+        <div class="heart">
+            ♥
+        </div>
+
+        <div class="person">
+
+            <div class="person-circle">
+                🤵
+            </div>
+
+            <!-- CHANGE NAME -->
+            <h3>Arjun</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DETAILS ================= -->
+
+<section class="details">
+
+    <h2 class="section-title">Save The Date</h2>
+
+    <div class="section-subtitle">
+        WE WOULD LOVE TO CELEBRATE WITH YOU
+    </div>
+
+    <div class="detail-container">
+
+        <div class="detail-box">
+
+            <div class="icon">📅</div>
+
+            <h3>DATE</h3>
+
+            <!-- CHANGE DATE -->
+            <p>
+                Tuesday<br>
+                15 December 2026
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <div class="icon">⏰</div>
+
+            <h3>TIME</h3>
+
+            <!-- CHANGE TIME -->
+            <p>
+                Muhurtham<br>
+                10:30 AM onwards
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <div class="icon">🌸</div>
+
+            <h3>CELEBRATION</h3>
+
+            <p>
+                Wedding Ceremony<br>
+                & Reception
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section class="countdown-section">
+
+    <h2 class="section-title">Counting Down To Forever</h2>
+
+    <div class="section-subtitle">
+        THE BIG DAY IS ALMOST HERE
+    </div>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>DAYS</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>HOURS</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>MINUTES</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>SECONDS</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VENUE ================= -->
+
+<section class="venue">
+
+    <h2 class="section-title">Wedding Venue</h2>
+
+    <div class="section-subtitle">
+        JOIN US FOR OUR SPECIAL DAY
+    </div>
+
+    <div class="venue-card">
+
+        <!-- CHANGE VENUE -->
+        <div class="venue-name">
+            The Grand Wedding Hall
+        </div>
+
+        <!-- CHANGE ADDRESS -->
+        <div class="venue-address">
+            Main Road, Hyderabad<br>
+            Telangana, India
+        </div>
+
+        <!-- CHANGE GOOGLE MAPS LINK -->
+        <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            class="map-button">
+            📍 VIEW LOCATION
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RSVP ================= -->
+
+<section class="rsvp">
+
+    <h2 class="section-title">Will You Join Us?</h2>
+
+    <p>
+        Your presence would mean the world to us.
+        Please let us know if you'll be joining
+        our celebration.
+    </p>
+
+    <!-- CHANGE EMAIL -->
+    <a
+        href="mailto:yourmail@example.com?subject=Wedding RSVP"
+        class="rsvp-button">
+        💌 RSVP NOW
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-names">
+        Arjun & Ananya
+    </div>
+
+    With love, laughter and happily ever after. ❤️
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/*
+   CHANGE THE WEDDING DATE HERE
+
+   Format:
+   YYYY-MM-DDTHH:MM:SS
+
+   Example:
+   2026-12-15T10:30:00
+*/
+
+const weddingDate = new Date("2026-12-15T10:30:00").getTime();
+
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+
+    const difference = weddingDate - now;
+
+
+    if (difference <= 0) {
+
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+
+        return;
+    }
+
+
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+
+    document.getElementById("days").innerText =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2, "0");
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+</script>
+
+</body>
+                                   </html>
